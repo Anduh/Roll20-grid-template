@@ -1,0 +1,79 @@
+.sheet-main {
+  display: grid;
+  width: 800px;
+  height: 900px;
+  grid-gap: 4px;
+  grid-template-columns: 100px 1fr 1fr 1fr;
+  grid-template-rows: 90px 1fr 1fr 1fr 20px;
+  grid-template-areas:"header  header  header  header"
+                      "skill   common  common  power"
+                      "skill   attack  inv     power"
+                      "skill   misc    inv     power"
+                      "footer  footer  footer  footer";
+}
+
+/*----------------- GENERAL CSS ------------------*/
+
+textarea {
+  width: 90%;
+  height: 85%;
+}
+
+.sheet-section {
+    padding: 5px;
+    border-style: solid;
+}
+
+.sheet-flex-col {
+  display: flex;
+  flex-flow: row wrap;
+  /*justify-content: flex-start;*/
+}
+
+.sheet-flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+/*------------- Section-specific CSS -------------*/
+
+.sheet-header {
+  grid-area: header;
+  background-color: olive;
+  flex-direction: column;
+}
+
+.sheet-skill {
+  grid-area: skill;
+  background-color: orange;
+}
+
+.sheet-common {
+  grid-area: common;
+  background-color: brown;
+}
+
+.sheet-power {
+  grid-area: power;
+  background-color: coral;
+}
+
+.sheet-attack {
+  grid-area: attack;
+  background-color: green;
+}
+
+.sheet-inv {
+  grid-area: inv;
+  background-color: grey;
+}
+
+.sheet-misc {
+  grid-area: misc;
+  background-color: chocolate;
+}
+
+.sheet-footer {
+  grid-area: footer;
+  background-color: gray;
+}
