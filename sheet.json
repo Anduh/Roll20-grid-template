@@ -1,0 +1,8 @@
+{
+    "html": "sheet-template.html",
+    "css": "sheet-template.css",
+    "authors": "Andreas J.",
+    "roll20userid": "1223200",
+    "preview": "sheet-template-preview.png",
+    "instructions": "This is a Character sheet template. In this field tell shortly what the system is and optionally link to relevant sources. you cna use markdown here."
+}
