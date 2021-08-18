@@ -1,0 +1,180 @@
+
+/*----------------- Main Layout ------------------*/
+
+/* A CSS Grid example using "grid-template-areas"
+  https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas
+*/
+main {
+  display: grid;
+  width: 800px;
+  height: 900px;
+  grid-gap: 4px;
+  grid-template-columns: 160px 1fr 1fr 1fr;
+  grid-template-rows: 90px 1fr 1fr 1fr 20px;
+  grid-template-areas:"header header  header  header"
+                      "skill  common  common  power"
+                      "skill  attack  inv     power"
+                      "misc   misc    inv     power"
+                      "footer footer  footer  footer";
+}
+
+/*----------------- GENERAL CSS ------------------*/
+
+section {
+    padding: 5px;
+    border-style: solid;
+}
+
+/* CSS Flexbox styling, used for adjusting how content inside section behaves */
+.f-col {
+  display: flex;
+  flex-direction: column;
+}
+.f-row {
+  display: flex;
+  flex-direction: row;
+}
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nowrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.f-center {
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*----------------- Text & Input styling -----------------*/
+
+@import url("https://fonts.googleapis.com/css?family=Lexend&display=swap");
+
+
+/* these are for overwriting default CSS that comes from Roll20 */
+
+.charsheet * {
+  font-family: "Lexend";
+}
+
+.charsheet h3{
+  text-align: center;
+}
+.charsheet label{
+  margin: 3px;
+  padding: 3px 0 0 0;
+}
+
+.charsheet input[type="text"], input[type="number"]{
+  margin: 2px 4px;
+}
+
+.charsheet textarea {
+  width: 95%;
+  height: 85%;
+}
+
+/*------------- Section-specific CSS -------------*/
+
+.header {
+  grid-area: header;
+  background-color: olive;
+  flex-direction: column;
+}
+
+.skill {
+  grid-area: skill;
+  background-color: orange;
+  justify-content: space-evenly;
+}
+
+.common {
+  grid-area: common;
+  background-color: brown;
+}
+
+.power {
+  grid-area: power;
+  background-color: coral;
+}
+
+.power .repcontainer[data-groupname="repeating_power"]{
+  padding-bottom: 0.2em;
+}
+
+.power .repcontainer[data-groupname="repeating_power"] .repitem{
+  margin: 4px 0px;
+}
+
+.attack {
+  grid-area: attack;
+  background-color: green;
+}
+
+.inv {
+  grid-area: inv;
+  background-color: grey;
+}
+
+.misc {
+  grid-area: misc;
+  background-color: chocolate;
+}
+
+footer {
+  grid-area: footer;
+  background-color: lightgray;
+}
+
+/*------------------------------------*\
+  #ROLL TEMPLATES
+\*------------------------------------*/
+
+.sheet-rolltemplate-rolls {
+  font-family: "Lexend";
+}
+.sheet-rolltemplate-rolls .sheet-container {
+  border: 3px solid black;
+  border-radius: 3px;
+}
+.sheet-rolltemplate-rolls .sheet-header {
+  background-color: var(--header-bg-color, #a83521);
+  color: var(--header-text-color, #FFF);
+  text-align: left;
+  text-transform: capitalize;
+  padding: 5px;
+  border-bottom: 2px solid black;
+}
+.sheet-rolltemplate-rolls .sheet-title,
+.sheet-rolltemplate-rolls .sheet-name {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.sheet-rolltemplate-rolls .sheet-subtitle {
+  font-size: 1em;
+}
+.sheet-rolltemplate-rolls .sheet-container {
+  --header-bg-color: #a83521;
+  --header-text-color: #FFF;
+}
+
+.sheet-rolltemplate-rolls .sheet-content {
+  display: grid;
+  background: #FFF;
+  grid-template-columns: auto auto;
+  line-height: 1.4em;
+}
+.sheet-rolltemplate-rolls .sheet-content > div {
+  padding: 5px;
+}
+.sheet-rolltemplate-rolls .sheet-content .sheet-key {
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: right;
+}
+.sheet-rolltemplate-rolls .sheet-content :nth-child(4n+3),
+.sheet-rolltemplate-rolls .sheet-content :nth-child(4n) {
+  background: #EEE;
+}
