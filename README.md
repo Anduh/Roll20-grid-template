@@ -4,11 +4,9 @@
 
 A simple Character Sheet Template for [Roll20](https://roll20.net/).
 
-See [Building Character Sheets](https://wiki.roll20.net/Building_Character_Sheets) for Roll20 sheet documentation.
+See [Building Character Sheets](https://wiki.roll20.net/Building_Character_Sheets) for sheet development documentation, starting with [Using Custom Sheets](https://wiki.roll20.net/Using_Custom_Character_Sheets).
 
-* [Using Custom Sheets](https://wiki.roll20.net/Using_Custom_Character_Sheets)
-* [Sheet Author Tips](https://wiki.roll20.net/Sheet_Author_Tips)
-
+**ToC**
 - [Roll20 Character Sheet Template](#roll20-character-sheet-template)
 - [Templates](#templates)
   - [New](#new)
